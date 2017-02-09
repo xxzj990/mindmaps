@@ -41,5 +41,13 @@ text/cache-manifest appcache;
 
 Alternatively, you can launch a local debug server with `npm start` which starts a server on localhost:8080.
 
+## Docker 
+Docker container is built from a fork of the original [drichard/mindmaps] (https://github.com/drichard/mindmaps). The following is the steps to pull and run the container. 
+
+```
+docker pull jonberenguer/mindmaps
+docker run -d -p 80:80 jonberenguer/mindmaps
+```
+
 ## License
 mindmaps is licensed under AGPL V3, see LICENSE for more information.
