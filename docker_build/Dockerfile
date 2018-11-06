@@ -18,8 +18,8 @@ RUN chown -Rf mindmaps:mindmaps /opt
 USER mindmaps
 
 RUN cd /opt \
-	&& tar -xvf /opt/node-v11.1.0-linux-x64.tar.xz
-	&& rm -f /opt/node-v11.1.0-linux-x64.tar.xz
+	&& tar -xvf /opt/node-v11.1.0-linux-x64.tar.xz \
+	&& rm -f /opt/node-v11.1.0-linux-x64.tar.xz \
 	&& git clone https://github.com/lgg/mindmaps.git \
 	&& cd /opt/mindmaps \
 	&& ls
