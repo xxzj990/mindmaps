@@ -1,6 +1,6 @@
 FROM centos:7.2.1511
 
-ENV PATH /opt/node-v6.9.4-linux-x64/bin:$PATH
+ENV PATH /opt/node-v11.1.0-linux-x64/bin:$PATH
 
 RUN useradd mindmaps
 
@@ -11,15 +11,15 @@ RUN yum install -y epel-release \
 
 COPY ./nginx.conf /etc/nginx/
 
-ADD https://nodejs.org/dist/v6.9.4/node-v6.9.4-linux-x64.tar.xz /opt
+ADD https://nodejs.org/dist/latest/node-v11.1.0-linux-x64.tar.xz /opt
 
 RUN chown -Rf mindmaps:mindmaps /opt
 
 USER mindmaps
 
-RUN tar -xvf /opt/node-v6.9.4-linux-x64.tar.xz -C /opt
+RUN tar -xvf /opt/node-v11.1.0-linux-x64.tar.xz -C /opt
 
-RUN rm -f /opt/node-v6.9.4-linux-x64.tar.xz
+RUN rm -f /opt/node-v11.1.0-linux-x64.tar.xz
 
 RUN cd /opt \
 	&& ls \
