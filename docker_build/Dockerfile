@@ -26,7 +26,7 @@ RUN cd /opt \
 	&& git clone https://github.com/lgg/mindmaps.git \
 	&& cd /opt/mindmaps \
 	&& npm install \
-	&& jake 
+	&& npm run deploy
 	
 USER root
 
