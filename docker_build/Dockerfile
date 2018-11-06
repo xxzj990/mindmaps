@@ -18,11 +18,19 @@ RUN chown -Rf mindmaps:mindmaps /opt
 USER mindmaps
 
 RUN cd /opt
+
+RUN ls
+
 RUN tar -xvf node-v6.9.4-linux-x64.tar.xz
+
 RUN rm -f node-v6.9.4-linux-x64.tar.xz
+
 RUN git clone https://github.com/lgg/mindmaps.git
+
 RUN cd /opt/mindmaps
+
 RUN npm install
+
 RUN jake
 
 USER root
