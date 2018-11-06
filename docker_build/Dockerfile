@@ -20,7 +20,7 @@ USER mindmaps
 RUN cd /opt \
   && tar -xvf node-v6.9.4-linux-x64.tar.xz \
   && rm -f node-v6.9.4-linux-x64.tar.xz \
-  && git clone https://github.com/jonberenguer/mindmaps.git \
+  && git clone https://github.com/lgg/mindmaps.git \
   && cd /opt/mindmaps \
   && npm install \ 
   && jake
