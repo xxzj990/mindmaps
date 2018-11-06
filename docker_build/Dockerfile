@@ -22,7 +22,7 @@ RUN cd /opt \
 	&& rm -f /opt/node-v11.1.0-linux-x64.tar.xz \
 	&& git clone https://github.com/lgg/mindmaps.git \
 	&& cd /opt/mindmaps \
-	&& ls
+	&& npm run deploy
 	
 USER root
 
