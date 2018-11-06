@@ -6,7 +6,9 @@ ADD https://nodejs.org/dist/v6.9.4/node-v6.9.4-linux-x64.tar.xz /opt
 
 RUN cd /opt
 
-RUN ls /opt
+RUN cd /opt
+
+RUN ls
 
 RUN tar -xvf node-v6.9.4-linux-x64.tar.xz
 
