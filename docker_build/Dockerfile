@@ -21,18 +21,13 @@ RUN tar -xvf /opt/node-v6.9.4-linux-x64.tar.xz -C /opt
 
 RUN rm -f /opt/node-v6.9.4-linux-x64.tar.xz
 
-RUN cd /opt
-
-RUN ls
-
-RUN git clone https://github.com/lgg/mindmaps.git
-
-RUN cd /opt/mindmaps
-
-RUN npm install
-
-RUN jake
-
+RUN cd /opt \
+	&& ls \
+	&& git clone https://github.com/lgg/mindmaps.git \
+	&& cd /opt/mindmaps \
+	&& npm install \
+	&& jake 
+	
 USER root
 
 EXPOSE 80
