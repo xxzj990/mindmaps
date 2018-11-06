@@ -17,16 +17,12 @@ RUN chown -Rf mindmaps:mindmaps /opt
 
 USER mindmaps
 
-RUN tar -xvf /opt/node-v11.1.0-linux-x64.tar.xz -C /opt
-
-RUN rm -f /opt/node-v11.1.0-linux-x64.tar.xz
-
 RUN cd /opt \
-	&& ls \
-	&& git clone --depth 1 https://github.com/lgg/mindmaps.git \
+	&& tar -xvf /opt/node-v11.1.0-linux-x64.tar.xz
+	&& rm -f /opt/node-v11.1.0-linux-x64.tar.xz
+	&& git clone https://github.com/lgg/mindmaps.git \
 	&& cd /opt/mindmaps \
-	&& npm install \
-	&& npm run deploy
+	&& ls
 	
 USER root
 
